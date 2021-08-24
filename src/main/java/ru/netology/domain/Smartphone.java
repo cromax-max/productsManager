@@ -13,7 +13,13 @@ public class Smartphone extends Product {
         this.manufacturer = manufacturer;
     }
 
-    public Smartphone(String manufacturer) {
-        this.manufacturer = manufacturer;
+    @Override
+    public boolean matches(String search) {
+            if (!super.matches(search)) {
+                if (this.manufacturer.equals(search)) {
+                    return true;
+                }
+            }
+            return super.matches(search);
     }
 }
