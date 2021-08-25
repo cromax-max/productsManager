@@ -5,10 +5,10 @@ import ru.netology.domain.Product;
 public class ProductsRepository {
     Product[] products = new Product[0];
 
-    public void save(Product movie) {
+    public void save(Product product) {
         Product[] tmp = new Product[products.length + 1];
         System.arraycopy(products, 0, tmp, 0, products.length);
-        tmp[tmp.length - 1] = movie;
+        tmp[tmp.length - 1] = product;
         products = tmp;
     }
 
